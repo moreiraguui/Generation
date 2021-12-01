@@ -1,0 +1,59 @@
+package br.com.generation.projeto.java.educa;
+
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class TurmaAluno {
+
+	//public static void main(String[] args) {
+	
+		public void turmaAlunos() {
+			
+		Scanner leia = new Scanner(System.in);
+		ArrayList<Aluno> alunos = new ArrayList<>();
+		
+		JOptionPane.showMessageDialog(null,"Qual o ciclo da turma?");
+		System.out.println("Digite o ciclo: ");
+        String ciclo = leia.nextLine();
+        
+        JOptionPane.showMessageDialog(null,"Qual o nome da turma?");
+        System.out.println("Digite a nome da turma: ");
+        String turma = leia.nextLine();
+		
+		JOptionPane.showMessageDialog(null, "Quantos alunos você deseja inserir? ");
+		System.out.println("\nDigite aqui a quantidade de alunos: ");
+
+		int numeroAlunos = leia.nextInt();
+		
+		leia.nextLine();		
+		
+		for(int i = 0; i < numeroAlunos; i++) {
+			System.out.println("\nDigite o nome do " + (i+1) + "º Aluno: ");
+			String nome = leia.nextLine();
+			leia.nextLine();
+						
+			System.out.println("Digite o endereço do Aluno: ");
+			String endereco = leia.nextLine();
+			leia.nextLine();
+						
+			System.out.println("O aluno entregou a atividade? ");
+			String entregaAtividade = leia.nextLine();
+			leia.nextLine();
+			
+			System.out.println("Observações: ");
+			String observacoes = leia.nextLine();
+			
+								
+			alunos.add(new Aluno(nome, endereco, entregaAtividade, observacoes));
+		}
+		
+		for(Aluno al : alunos) {
+			System.out.println(al);
+		
+		}
+	}
+	
+}
