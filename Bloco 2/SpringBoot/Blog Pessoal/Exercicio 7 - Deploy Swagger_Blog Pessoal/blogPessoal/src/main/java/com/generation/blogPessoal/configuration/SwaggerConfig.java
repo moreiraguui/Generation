@@ -28,7 +28,7 @@ import io.swagger.v3.oas.models.responses.ApiResponses;
 	                        .name("Generation Brasil")
 	                        .url("https://generation.org"))
 	                .contact(new Contact()
-	                        .name("WeHug")
+	                        .name("Blog Pessoal - Guilherme")
 	                          .url("https://github.com/moreiraguui/Blog-Pessoal")
 	                          .email("guilhermemoreira111@hotmail.com")))
 	                .externalDocs(new ExternalDocumentation()
